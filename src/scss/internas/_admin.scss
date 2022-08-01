@@ -1,0 +1,55 @@
+@use 'base/variables' as v;
+
+.alerta{
+    padding: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 2rem;
+    border-radius: .5rem;
+    color: v.$blanco;
+
+    &:last-of-type{
+        margin-bottom: 2rem;
+    }
+
+    &.error{
+        background-color: v.$rojo;
+    }
+
+    &.exito{
+        background-color: v.$verde;
+    }
+}
+
+table.propiedades{
+    margin-top: 4rem;
+    border-spacing: 0;
+    width: 100%;
+
+    thead{
+        background-color: v.$verde;
+
+        th{
+            color: v.$blanco;
+            padding: 2rem;
+        }
+    }
+
+    .imagen-tabla{
+        width: 10rem;
+        margin: 0 auto;
+    }
+
+    tbody{
+
+        td{
+            text-align: center;
+        }
+    }
+}
+
+.image-small{
+    width: 20rem;
+    margin-bottom: 2rem;
+}

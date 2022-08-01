@@ -1,0 +1,60 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+h1{
+    font-size: 3.8rem;
+}
+
+.formulario{
+    legend{
+        font-size: 2rem;
+    }
+
+    label{
+        display: block;
+        font-size: 1.6rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    input:not([type="submit"]), textarea, select{
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid #e1e1e1;
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    textarea{
+        min-height: 20rem;
+    }
+
+}
+
+.forma-contacto{
+    max-width: 20rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    @include m.tablet{
+        max-width: 30rem;
+        margin: 0;
+        justify-content: flex-start;
+
+        label{
+            margin-right: 2rem;
+        }
+
+        div{
+            display: flex;
+            justify-content: space-between;
+            margin-right: 2rem;
+        }
+    }
+
+    input[type="radio"]{
+        width: auto;
+        margin: 0;
+    }
+}

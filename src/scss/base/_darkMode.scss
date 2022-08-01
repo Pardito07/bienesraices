@@ -1,0 +1,64 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.dark-mode{
+    background-color: darken(v.$grisOscuro, 10);
+
+    p{
+        color: v.$blanco;
+    }
+
+    a, h1, h2, h3, h4{
+        color: v.$gris;
+    }
+
+    .anuncio{
+        background-color: v.$grisOscuro;
+        border: 1px solid lighten(v.$grisOscuro, 5);
+
+        .icono{
+            filter: invert(100%);
+        }
+    }
+    
+    .texto-nosotros blockquote{
+        color: v.$blanco;
+    }
+
+    .precio{
+        color: v.$verde;
+    }
+
+    .formulario{
+
+        label{
+            color: v.$gris;
+        }
+        legend{
+            color: v.$blanco;
+        }
+        input:not([type="submit"]), textarea, select{
+            background-color: v.$grisOscuro;
+            border: 1px solid v.$grisOscuro;
+            color: v.$blanco;
+        }
+    }
+
+    .resumen-propiedad{
+        .iconos-caracteristicas{
+            .icono{
+                filter: invert(100%);
+            }
+        }
+    }
+
+    .propiedades{
+        tbody{
+            tr{
+                td{
+                    color: v.$blanco
+                }
+            }
+        }
+    }
+}

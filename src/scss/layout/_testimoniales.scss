@@ -1,0 +1,53 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.testimonial{
+    background-color: v.$verde;
+    padding: 2rem;
+    color: v.$blanco;
+    font-size: 2.4rem;
+    border-radius: 1.2rem;
+
+    blockquote{
+        padding-left: 5rem;
+        position: relative;
+
+        &::before{
+            content: '';
+            height: 8rem;
+            width: 6rem;
+            background-repeat: no-repeat;
+            display: block;
+            background-image: url(../img/comilla.svg);
+            position: absolute;
+            left: -2rem;
+        }
+    }
+
+    
+
+    p{
+        color: v.$blanco;
+        text-align: right;
+    }
+}
+
+.testimoniales{
+
+    .boton-testimoniales{
+        a{
+            display: block;
+        }
+    }
+
+    @include m.tablet{
+        .boton-testimoniales{
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        a{
+            display: inline-block;
+        }
+    }
+}
